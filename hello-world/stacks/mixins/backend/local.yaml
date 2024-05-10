@@ -1,0 +1,2 @@
+terraform:
+  backend_type: local

@@ -1,0 +1,14 @@
+import:
+  - mixins/backend/local.yaml
+
+vars:
+  namespace: default
+  tags:
+    atmos:stack: '{{ .atmos_stack }}'
+    atmos:component: '{{ .atmos_component }}'
+    atmos:component_version: '{{ .component }}'
+    atmos:manifest: '{{ .atmos_stack_file }}'
+    atmos:workspace: '{{ .workspace }}'
+    tenant: '{{ .vars.tenant }}'
+    instance: '{{ .vars.instance }}'
+    stage: '{{ .vars.stage}}'

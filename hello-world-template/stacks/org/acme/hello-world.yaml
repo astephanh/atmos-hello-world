@@ -1,0 +1,18 @@
+import:
+  - org/acme/_defaults
+
+vars:
+  tenant: org
+  environment: acme
+  stage: test
+  component: v0.1.0
+
+components:
+  terraform:
+    hello-world:
+      metadata:
+        component: 'hello-world/{{ .vars.component }}'
+      vars:
+        lang: de
+        location: hh
+        region: hh

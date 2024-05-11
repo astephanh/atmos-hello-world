@@ -3,10 +3,6 @@ import:
 
 settings:
   component: v0.1.0
-  templates:
-    settings:
-      enabled: true
-      evaluations: 2
 
 vars:
   tenant: org

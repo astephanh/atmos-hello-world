@@ -1,18 +1,32 @@
 import:
   - org/acme/_defaults
 
+settings:
+  component: v0.1.0
+  templates:
+    settings:
+      enabled: true
+      evaluations: 2
+
 vars:
   tenant: org
   environment: acme
   stage: test
-  component: v0.1.0
 
 components:
   terraform:
-    hello-world:
+    hello-world/1:
       metadata:
-        component: 'hello-world/{{ .vars.component }}'
+        component: 'hello-world/{{ .settings.component }}'
       vars:
         lang: de
         location: hh
         region: hh
+
+    hello-world/2:
+      metadata:
+        component: 'hello-world/{{ .settings.component }}'
+      vars:
+        lang: en
+        location: washington
+        region: dc

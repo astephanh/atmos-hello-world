@@ -1,5 +1,8 @@
-import:
-  - mixins/backend/local.yaml
+terraform:
+  backend_type: s3
+  backend:
+    s3:
+      workspace_key_prefix: terraform
 
 vars:
   namespace: default

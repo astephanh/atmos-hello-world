@@ -7,6 +7,10 @@ module "vpc" {
   # for which to get the remote state outputs
   component = "vpc"
 
+  tenant      = "org"
+  environment = "acme"
+  stage       = "test"
+
   # `context` input is a way to provide the information about the stack (using the context
   # variables `namespace`, `tenant`, `environment`, and `stage` defined in the stack config)
   context = module.this.context

@@ -6,26 +6,20 @@ components:
     apply_auto_approve: false
     deploy_run_init: true
     init_run_reconfigure: false
-    auto_generate_backend_file: true
+    auto_generate_backend_file: false
 
 stacks:
   base_path: 'stacks'
   included_paths:
     - 'org/**/*'
   excluded_paths:
+    - 'catalog/**/*'
     - '**/_defaults.yaml'
   name_pattern: '{tenant}-{environment}-{stage}'
-
-workflows:
-  base_path: 'stacks/workflows'
 
 logs:
   file: '/dev/stdout'
   level: Info
-
-schemas:
-  atmos:
-    manifest: 'stacks/schemas/atmos/atmos-manifest/1.0/atmos-manifest.json'
 
 # https://pkg.go.dev/text/template
 templates:

@@ -9,7 +9,7 @@
 ## Repositories
 
 `hello-world`: simple test with local state, no real resources are created
-`hello-world-template` tries to use templating for component version (not working)
+`hello-world-template` uses templating for component version
 
 ---
 
